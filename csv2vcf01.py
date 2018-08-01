@@ -9,7 +9,7 @@ from tkinter import filedialog
 tkinter.Tk().withdraw()
 file = filedialog.askopenfilename(filetypes=[('Csv file','*.csv'),])
 name = file[:-4]+'-FINAL.vcf'
-
+#Assuming file format: Name, Phone Number
 with open(file, 'r') as csvfile:
     reader = csv.reader(csvfile)
     for col in reader:
